@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mall Analytics Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Shopping Mall Analytics Dashboard</h2>
+
+    <form method="POST">
+        <input type="text" name="query" placeholder="Ask something like: Show total revenue for each product..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if sql_query %}
+        <div class="sql-box">
+            <strong>Generated SQL:</strong><br>
+            {{ sql_query }}
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    {% if results %}
+        <table>
+            <tr>
+                {% for column in results[0].keys() %}
+                    <th>{{ column.replace('_', ' ') }}</th>
+                {% endfor %}
+            </tr>
+
+            {% for row in results %}
+                <tr>
+                    {% for value in row.values() %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

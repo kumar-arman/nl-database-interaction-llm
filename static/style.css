@@ -1,0 +1,142 @@
+/* ------------------------
+   GLOBAL STYLES
+------------------------- */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #333;
+}
+
+/* ------------------------
+   MAIN CONTAINER
+------------------------- */
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------------
+   HEADER
+------------------------- */
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #1e3c72;
+    margin-bottom: 30px;
+}
+
+
+/* ------------------------
+   FORM STYLING
+------------------------- */
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+
+input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 8px rgba(42, 82, 152, 0.4);
+}
+
+button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2a5298;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e3c72;
+    transform: scale(1.05);
+}
+
+/* ------------------------
+   GENERATED SQL BOX
+------------------------- */
+
+.sql-box {
+    background: #313f64;
+    color: #f7f8f8;
+    padding: 25px;
+    border-radius: 12px;
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+/* ------------------------
+   TABLE STYLING
+------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+th {
+    background: linear-gradient(90deg, #2a5298, #1a2f52);
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 14px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #dce6f9;
+    transition: 0.2s;
+}
+
+/* ------------------------
+   ERROR MESSAGE
+------------------------- */
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
